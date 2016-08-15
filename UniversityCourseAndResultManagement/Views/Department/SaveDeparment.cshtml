@@ -1,0 +1,41 @@
+﻿@using UniversityCourseAndResultManagement.Models
+@model UniversityCourseAndResultManagement.Models.Department
+@{
+    ViewBag.Title = "Save Department";
+}
+
+
+
+    <div>
+        @using (Html.BeginForm()){<fieldset>
+                                      <legend>Save Department</legend>
+                                      <table>
+                                          <tr>
+                                              <td>@Html.LabelFor(x => x.Code)</td>
+                                              <td>@Html.TextBoxFor(x => x.Code)</td>
+                                              <td>@Html.ValidationMessageFor(x=>x.Code)</td>
+                                          </tr>
+                                          <tr>
+                                              <td>@Html.LabelFor(x => x.Name)</td>
+                                              <td>@Html.TextBoxFor(x => x.Name)</td>
+                                              <td>@Html.ValidationMessageFor(x => x.Name)</td>
+                                          </tr>
+                                          <tr>
+                                              <td></td>
+                                              <td><input type="submit" name="Save" value="Save" /></td>
+                                          </tr>
+                                          <tr>
+                                              <td></td>
+                                              <td>
+                                                  @if (ViewBag.Message != null)
+                                                        {
+                                                            <p><h2>@ViewBag.Message</h2></p>
+                                                        }
+                                              </td>
+                                          </tr>
+
+                                      </table>
+
+                
+                                  </fieldset>} 
+    </div>

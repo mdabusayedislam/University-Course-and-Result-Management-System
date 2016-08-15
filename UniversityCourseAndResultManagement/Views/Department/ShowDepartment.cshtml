@@ -1,0 +1,21 @@
+﻿@model IEnumerable<UniversityCourseAndResultManagement.Models.Department>
+@{
+    ViewBag.Title = "View All Department";
+}
+
+
+        <div>
+            <fieldset>
+                <legend>View All Departments</legend>
+                <table border="1">
+                    <tr><th bgcolor="#e0e0d1">Code</th><th bgcolor="#e0e0d1">Name</th></tr>
+                    @foreach (var items in Model) 
+                    {  <tr>
+                           <td>@items.Code</td>
+                           <td>@items.Name</td>
+                       </tr>}
+               
+                </table>
+            </fieldset> 
+        </div>
+    
